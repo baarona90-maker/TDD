@@ -1,4 +1,4 @@
 export function add(numbers: string): number {
   if (numbers === "") return 0;
-  return parseInt(numbers);
+  return numbers.split(",").reduce((sum, n) => sum + parseInt(n), 0);
 }
