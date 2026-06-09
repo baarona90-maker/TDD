@@ -1,12 +1,13 @@
-export function pigLatin(word: string): string {
-  const vowels = ["a", "e", "i", "o", "u"];
+const isVowel = (char: string): boolean =>
+  ["a", "e", "i", "o", "u"].includes(char);
 
-  if (vowels.includes(word[0])) {
+export function pigLatin(word: string): string {
+  if (isVowel(word[0])) {
     return word + "ay";
   }
 
   let i = 0;
-  while (i < word.length && !vowels.includes(word[i])) {
+  while (i < word.length && !isVowel(word[i])) {
     i++;
   }
 
