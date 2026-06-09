@@ -1,6 +1,6 @@
 import { assertEquals, assertThrows } from "jsr:@std/assert"
 import { add } from "./string-calculator.ts"
 
-Deno.test("un seul nombre retourne ce nombre", () => {
-  assertEquals(add("5"), 5);
+Deno.test("deux nombres séparés par une virgule", () => {
+  assertEquals(add("1,2"), 3);
 });
